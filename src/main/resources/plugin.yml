@@ -1,0 +1,6 @@
+name: LogX
+version: '1.0'
+main: org.lukez.logX.LogX
+api-version: '1.21'
+authors: [ NT_AUTHORITY ]
+website: github.com/NT-AUTHORITY
