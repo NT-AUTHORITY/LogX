@@ -31,6 +31,25 @@ public final class LogX extends JavaPlugin {
             getServer().getPluginManager().registerEvents(new CommandListener(this), this);
 
             getLogger().info("LogX 插件已启动！");
+            getLogger().info(getDescription().getDescription());
+            getLogger().info("版本：" + getDescription().getVersion());
+            getLogger().info("==================================================");
+            getLogger().info("注意：日志文件位于 " + logFile.getAbsolutePath());
+            getLogger().info("==================================================");
+            getLogger().info("LogX 插件使用说明：");
+            getLogger().info("1. 插件会记录玩家的命令和方块操作（放置和破坏）到日志文件中。");
+            getLogger().info("2. 日志文件格式如下：");
+            getLogger().info("玩家破坏方块日志格式：");
+            getLogger().info("[B] [玩家名] [维度] x,y,z: Broke 方块类型");
+            getLogger().info("玩家放置方块日志格式：");
+            getLogger().info("[P] [玩家名] [维度] x,y,z: Placed 方块类型");
+            getLogger().info("玩家命令日志格式：");
+            getLogger().info("[C] [玩家名] [维度] x,y,z: 命令");
+            getLogger().info("命令方块日志格式：");
+            getLogger().info("[CB] [方块类型] [触发类型] [维度] x,y,z: 命令");
+            getLogger().info("命令方块日志现在不完善");
+            getLogger().info("[CB] [方块类型] [触发类型] [维度] x,y,z: 命令");
+            getLogger().info("中的 触发类型 一定为 _");
         } catch (IOException e) {
             e.printStackTrace();
         }
